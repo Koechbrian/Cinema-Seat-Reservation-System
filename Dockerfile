@@ -1,6 +1,9 @@
 # Use PHP as base image
 FROM php:7.4-apache
 
+# Install PHP MySQL extension
+RUN docker-php-ext-install mysqli
+
 # Set working directory
 WORKDIR /var/www/html
 
